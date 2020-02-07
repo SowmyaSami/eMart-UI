@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>View-bill</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<style>
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   text-align: center;
+}
+
+   body { background: navy !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+.card-width{
+width: 220px;
+}
+.img-size{
+height: 200px;
+</style>
+
+
+<body>
+<nav
+		class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-right-side">
+		<a class="navbar-brand" href="#"> <img
+			src=" E:\sowmya\eMart UI\eMart-master\eMart UI\images\logo.png"
+			alt="Logo" style="width: 100px;">
+		</a> <a class="navbar-brand" href="#">eMart</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav  ml-auto">
+				<li class="nav-item"><a class="nav-link" href="#"></li>
+				<li class="navbar-right">Product List</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#"></li>
+				<li class="navbar-right">Cart</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#"></li>
+				<li class="navbar-right">Purchase History</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#"></li>
+				<li class="navbar-right">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+<div class="container">
+	<div class="row mt-5">
+	<div class="col-3"></div>
+	<div class="col-md-6 set-md-6">
+	  <div class="card card-align">
+		<div class="card-header" style="background-color:LightGray">View Bill</div>
+		  <div class="card-body">
+                    <address>
+                        <strong>eMart</strong
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 ">
+                    <p>
+                        <em>Date: 6st February, 2020</em>
+                    </p>
+                    <p>
+                        <em>Receipt #: 123XXajhg12</em>
+                    </p>
+					<p>
+                        <em>Buyer:ABC</em>
+                    </p>
+                </div>
+            
+           <!-- <div class="row"> -->
+           
+                </span>
+                <table class="table table-hover">
+                    
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Total</th>
+                        </tr>
+                   
+                    <tbody>
+                        <tr>
+                            <td class="col-md-9"><em>Fridge</em></h4></td>
+                            <td class="col-md-1" style="text-align: center"> 1 </td>
+                            <td class="col-md-1 text-center">Rs:20000.00</td>
+                            <td class="col-md-1 text-center">Rs:20000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-9"><em>Coat</em></h4></td>
+                            <td class="col-md-1" style="text-align: center"> 1 </td>
+                            <td class="col-md-1 text-center">Rs:500.00</td>
+                            <td class="col-md-1 text-center">Rs:500.00</td>
+                        </tr>
+						 <tr>
+                            <td class="col-md-9"><em>Plant</em></h4></td>
+                            <td class="col-md-1" style="text-align: center"> 2 </td>
+                            <td class="col-md-1 text-center">Rs:300.00</td>
+                            <td class="col-md-1 text-center">Rs:600.00</td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right">
+                            <p>
+                                <strong>Subtotal: </strong>
+                            </p>
+                            <p>
+                                <strong>Tax: </strong>
+                            </p></td>
+                            <td class="text-center">
+                            <p>
+                                <strong>Rs:21,100.00</strong>
+                            </p>
+                            <p>
+                                <strong>Rs:100.95</strong>
+                            </p></td>
+                        </tr>
+                        <tr>
+                            <td>   </td>
+                            <td>   </td>
+                            <td class="text-right"><h4><strong>Total: </strong></h4></td>
+                            <td class="text-center text-danger"><h4><strong>Rs:21,200.95</strong></h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-success btn-lg btn-block ">
+                    Pay Now   <i class="material-icons" style="font-size:25px;">payment</i>
+                </button></td>
+            </div>
+        </div>
+    </div>
+	<!-- </div> -->
+	<!--Footer-->
+	<div class="footer">
+		<div class="footer-inner">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-lg-12 card-footer bg-dark text-center text-white fixed-bottom">Copyright
+						&copy;2020 eMart
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

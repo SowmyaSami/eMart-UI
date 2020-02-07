@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product-list</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<style>
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: gray;
+   color: white;
+   text-align: center;
+}
+   body { background: navy !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+.card-width{
+width: 220px;
+}
+.img-size{
+height: 200px;
+</style>
+
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<a class="navbar-brand" href="#"> <img
+			src=" E:\sowmya\eMart UI\eMart-master\eMart UI\images\logo.png"
+			alt="Logo" style="width: 100px;">
+    <div class="container">
+        <a class="navbar-brand ml-auto" href="index.html">eMart</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggle-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="category.html">Categories <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-secondary btn-number">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <a class="btn btn-success btn-sm ml-3" href="cart.html">
+                    <i class="fa fa-shopping-cart"></i> Cart
+                    <span class="badge badge-light">3</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="col-2 bg-dark">
+<h4 class="form-heading font-weight-bold form-group text-white"> Filters </h4>
+<div class="row">
+<div class="col-12 form-group ">
+<h5 class="float-left text-white">Price</h5>
+</div>
+<div class="col-12 form-group">
+<label class="form-label font-weight-bold text-white" for="FromPrice" > From: </label>
+<input class="form-control " id="FromPrice " type="number" step="100" min="0">
+</div>
+<div class="col-12 form-group">
+<label class="form-label font-weight-bold text-white " for="ToPrice" > To: </label>
+<input class="form-control" id="ToPrice" type="number" step="100" min="0">
+</div>
+<div class="col-12 form-group">
+<label class="form-label font-weight-bold text-white" for="brand" >Brand </label>
+<input class="form-control" id="brand" type="text">
+</div>
+<div class="form-group mx-auto">
+<button type="submit" id="btnFilter" class="btn btn-primary form-control">Filter</button>
+</div>
+</div>
+</div>
+<div class="col-10">
+<div class="row">
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-2 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Realme X2">
+<div class="card-body">
+<div class="row">
+<div class="col-6">
+<h5>Realme </h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.15000</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="nike shoes">
+<div class="card-body">
+<div class="row">
+<div class="col-6">
+<h5> Shoes</h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.15000</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="jeans">
+<div class="card-body">
+<div class="row">
+<div class="col-6">
+<h5>Jeans</h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.490</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="plant">
+<div class="card-body">
+<div class="row">
+<div class="col-6">
+<h5>Plants</h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.300</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1461151304267-38535e780c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="television">
+<div class="card-body">
+<div class="row">
+<div class="col-8">
+<h5>Television</h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.50000</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1553534389-5cf519d70378?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="coat">
+<div class="card-body">
+<div class="row">
+<div class="col-6">
+<h5>Coat</h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.500</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1534534665817-8493579d3fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Frock">
+<div class="card-body">
+<div class="row">
+<div class="col-6">
+<h5>Frock</h5>
+</div>
+<div class="col-6">
+<p class="small text-left">Rs.1500</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="col-sm-12 col-md-6 col-lg-3">
+<div class="card card-width mx-3 my-2">
+<img class="card-img-top img-size"
+src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Fridge">
+<div class="card-body">
+<div class="row">
+<div class="col-8">
+<h5>Fridge</h5>
+</div>
+<div class="col-4">
+<p class="small text-left">Rs.20000</p>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+
+</div>
+<div class="col-6">
+<i class="material-icons align-middle">local_shipping</i>
+<span class="badge badge-success align-middle">Free</span>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<a class="btn btn-primary" href="#">
+<i class="material-icons align-middle">view_list</i>
+<span class="align-middle">view product</span>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+ <div class="col">
+ 	<!--Footer-->
+	<div class="footer">
+		<div class="footer-inner">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-lg-12 card-footer bg-dark text-center text-white fixed-bottom">Copyright
+						&copy;2020 eMart
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
